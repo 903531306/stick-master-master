@@ -21,7 +21,9 @@ PtrScrollView 自定义 ScrollView 加上拉刷次下拉刷新头部悬浮
                 ptrScrollView.onRefreshComplete();
             }
         });
+        
          //设置下拉刷新模式 此模式不设置 没有上拉
+         
         ptrScrollView.setMode(PullToRefreshBase.Mode.BOTH);
         ptrScrollView.setCallBack(new PtrScrollView.CallBack() {
             @Override
@@ -38,12 +40,18 @@ PtrScrollView 自定义 ScrollView 加上拉刷次下拉刷新头部悬浮
             }
         });
     }
+    
       //自动刷新 此处要加在初始化完成之后否则没有效果
+      
+      
       new Handler().postDelayed(new Runnable() {
             public void run() {
                 ptrScrollView.setRefreshing();
             }
         }, 500);
+        
+        
+        
     /**
      * 显示滚动记录
      *
